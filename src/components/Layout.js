@@ -117,12 +117,13 @@ export default function Layout() {
                 <Grid item xs={4} md={4}>
                   <Item sx={{
                     height: '300px'
-                  }}><img key={index} src={image} alt={`image${index}`} style={{
-                    objectFit: 'cover',
-                    width: '100%',
-                    height: '100%',
-                    borderRadius: '10px',
-                  }}
+                  }}>
+                    <img key={index} src={image} alt={`image${index}`} style={{
+                      objectFit: 'cover',
+                      width: '100%',
+                      height: '100%',
+                      borderRadius: '10px',
+                    }}
                     /></Item>
                 </Grid>
               ))}
