@@ -5,5 +5,40 @@
 
 @font-face {
   font-family: 'Bebas Neue';
-  src: url('./BebasNeue-Regular.ttf') format('truetype');
+  src: url('./BebasNeue Regular.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Bebas Neue Book';
+  src: url('./BebasNeue Book.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Bebas Neue Light';
+  src: url('./BebasNeue Light.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Esteban Regular';
+  src: url('./Esteban-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Ringift';
+  src: url('./Ringift.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Kinta';
+  src: url('./Kinta.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Georgia';
+  src: url('./Georgia.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Muli';
+  src: url('./Muli.ttf') format('truetype');
 }
