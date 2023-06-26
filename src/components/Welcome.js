@@ -10,10 +10,11 @@ const Welcome = () => {
       flexDirection: 'column-reverse',
       height: '80vh',
       textAlign: 'left',
-      padding: '0px 40px 10px 20px',
+      padding: '0px 40px 10px 40px',
     }}>
+      <h2>Welcome to my bento box!</h2>
       <h1>
-        I'm Benjamin Tang, an impact-delivering, creative-thinking computer science student @ Cornell.</h1>
+        I'm Benjamin Tang, an impact-delivering, creative-thinking computer science student @ Cornell University.</h1>
       <img src={sprout} style={{
         objectFit: 'cover',
         width: '100px',

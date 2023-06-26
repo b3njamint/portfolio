@@ -3,12 +3,17 @@ import { Box, Grid } from '@mui/material';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import Diversity3Icon from '@mui/icons-material/Diversity3';
+import CarCrashIcon from '@mui/icons-material/CarCrash';
+import ColorLensIcon from '@mui/icons-material/ColorLens';
+import LibraryMusicIcon from '@mui/icons-material/LibraryMusic';
 import Welcome from './Welcome';
 import Picture from './Picture';
 import ContactButton from './ContactButton';
 import Item from './Item';
 import AboutMe from './AboutMe';
 import Education from './Education';
+import ProjectItem from './ProjectItem';
 import pine from '../images/pine.jpeg';
 import walnut from '../images/walnut.jpeg';
 import '../style/style.css';
@@ -109,16 +114,81 @@ export default function Layout() {
                 </Item>
               </Grid>
               <Grid item xs={12} md={12}>
-                <Item><h1>Artwork</h1>
-                  <h2>Check out <a href="https://www.art.benjamint.me/" target='false'>www.art.benjamint.me</a> for more!</h2>
+                <Item><h1>Portfolio</h1>
                 </Item>
               </Grid>
+              <Grid item xs={6} md={6} sx={{ minHeight: '200px' }}>
+                <Item className="click" sx={{ height: '70vh' }}>
+                  <ProjectItem
+                    github="https://github.com/cornell-dti/zing-lsc"
+                    title="Zing"
+                    icon={<Diversity3Icon />}
+                    link="github.com/cornell-dti/zing-lsc"
+                    summary={`"Scalable iOS app to connect Cornell student freelancers with customers."`}
+                    description={`● Lead backend dev using Python and Swift
+                    ● Wrote 15+ REST API endpoints with authentication using Flask, architected database in SQLite/SQLAlchemy, and containerized/deployed using Docker and GCP
+                    ● Awarded Best Frontend/UI by Cornell App Development out of 150+ students`}
+                  />
+                </Item>
+              </Grid>
+              <Grid item xs={6} md={6} sx={{ minHeight: '200px' }}>
+                <Item className="click" sx={{ height: '70vh' }}>
+                  <ProjectItem
+                    github="https://github.com/b3njamint/cs-3110-final"
+                    title="Melody Generator"
+                    icon={<LibraryMusicIcon />}
+                    link="github.com/b3njamint/cs-3110-final"
+                    summary={`"Multi-hand music generator in modern and archaic scales, built entirely in OCaml"`}
+                    description={`● Implemented multi-hand harmonies, chords, and different instruments
+                    ● Enabled robust input validation through pattern matching
+                    ● Wrote 100s of lines of black-box, glass-box, and randomized test cases`}
+                  />
+                </Item>
+              </Grid>
+              <Grid item xs={6} md={6} sx={{ minHeight: '200px' }}>
+                <Item className="click" sx={{ height: '70vh' }}>
+                  <ProjectItem
+                    website="https://www.aiartcritic.com/"
+                    github="https://github.com/b3njamint/aiartcritic/"
+                    title="AI Art Critic"
+                    icon={<ColorLensIcon />}
+                    link="aiartcritic.com"
+                    summary={`"Web app to determine artictic qualities of any image you upload."`}
+                    description={`● Trained classification models with 25,000 images to critique art
+                    ● Designed and coded algorithms to analyze pixels and colors in Python
+                    ● Developed a website using Django and deployed on Google Cloud`}
+                  />
+                </Item>
+              </Grid>
+              <Grid item xs={6} md={6} sx={{ minHeight: '200px' }}>
+                <Item className="click" sx={{ height: '70vh' }}>
+                  <ProjectItem
+                    website="https://www.voby.us/"
+                    title="Vobyus"
+                    icon={<CarCrashIcon />}
+                    link="voby.us"
+                    summary={`"Jetson Nano-based smart dashboard detecting drowsy and distracted driving."`}
+                    description={`● Co-founded student entrepreneurship team, achieved 85% accuracy to prevent vehicle accidents, using JavaScript, Python, TensorFlow
+                    ● 1st place at the 2021 Model Entrepreneur Competition by Columbia Business School, named a Conrad Innovator`}
+                  />
+                </Item>
+              </Grid>
+              <Grid item xs={12} md={12}>
+                <Item className="click">
+                  <ContactButton
+                    href="https://www.art.benjamint.me/"
+                    title="Portfolio (the other kind)"
+                    description="Check out art.benjamint.me for more!"
+                  />
+                </Item>
+              </Grid>
+
               {images.map((image, index) => (
                 <Grid item xs={4} md={4}>
                   <Item sx={{
                     height: '300px'
                   }}>
-                    <img key={index} src={image} alt={`image${index}`} style={{
+                    <img key={index} src={image} alt={`${index}`} style={{
                       objectFit: 'cover',
                       width: '100%',
                       height: '100%',
