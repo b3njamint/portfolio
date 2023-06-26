@@ -1,7 +1,8 @@
 import React from 'react';
 import Box from '@mui/material/Box';
+import RamenDiningOutlinedIcon from '@mui/icons-material/RamenDiningOutlined';
 import '../style/style.css';
-import sprout from '../images/sprout.png';
+// import sprout from '../images/sprout.png';
 
 const Welcome = () => {
   return (
@@ -15,10 +16,11 @@ const Welcome = () => {
       <h2>Welcome to my bento box!</h2>
       <h1>
         I'm Benjamin Tang, an impact-delivering, creative-thinking computer science student @ Cornell University.</h1>
-      <img src={sprout} style={{
+      <RamenDiningOutlinedIcon sx={{ fontSize: '100px' }} />
+      {/* <img src={sprout} style={{
         objectFit: 'cover',
         width: '100px',
-      }} />
+      }} /> */}
     </Box >
   );
 };

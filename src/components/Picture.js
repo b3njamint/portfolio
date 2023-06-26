@@ -1,4 +1,5 @@
 import React from 'react';
+
 import pfp from '../images/pfp.jpg'
 
 const Picture = () => {
