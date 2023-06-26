@@ -5,11 +5,11 @@ const Education = () => {
   return (
     <>
       <h1>Education</h1>
-      <h2>
+      <h2 style={{ margin: '0px 30px' }}>
         <span style={{ color: '#3366CC' }}>Cornell University<br /></span>
         B.S. Computer Science | 3.83 GPA<br />
         Minors in Math, Business<br />
-        Meinig National Scholar | Dean's List
+        Meinig National Scholar | Dean's List<br />
         Ithaca, NY
       </h2>
       <h2>
