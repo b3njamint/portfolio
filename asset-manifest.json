@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.c3dbb56a.css",
+    "main.css": "/portfolio/static/css/main.8c8fd105.css",
     "main.js": "/portfolio/static/js/main.579b281b.js",
     "static/js/787.1ed0c42c.chunk.js": "/portfolio/static/js/787.1ed0c42c.chunk.js",
     "static/media/image30.jpg": "/portfolio/static/media/image30.d4d970eed6fff91c05f0.jpg",
@@ -27,18 +27,17 @@
     "static/media/BebasNeue Regular.otf": "/portfolio/static/media/BebasNeue Regular.e3610bd1e3b0157e445e.otf",
     "static/media/cream.jpeg": "/portfolio/static/media/cream.d5ca68519ffeb32bf97b.jpeg",
     "static/media/BebasNeue Light.otf": "/portfolio/static/media/BebasNeue Light.59a06f4fbe00095ff988.otf",
-    "static/media/JosefinSans-Regular.ttf": "/portfolio/static/media/JosefinSans-Regular.c978665c44b59cf9c71f.ttf",
     "static/media/Muli.ttf": "/portfolio/static/media/Muli.4829cf81e2b513fc1b64.ttf",
     "static/media/Esteban-Regular.ttf": "/portfolio/static/media/Esteban-Regular.2e7c65c0055848641bc2.ttf",
     "static/media/Kinta.otf": "/portfolio/static/media/Kinta.f80052aec81e5e55b5cf.otf",
     "static/media/sprout.png": "/portfolio/static/media/sprout.aa900fa5c3f3bbeb563b.png",
     "index.html": "/portfolio/index.html",
-    "main.c3dbb56a.css.map": "/portfolio/static/css/main.c3dbb56a.css.map",
+    "main.8c8fd105.css.map": "/portfolio/static/css/main.8c8fd105.css.map",
     "main.579b281b.js.map": "/portfolio/static/js/main.579b281b.js.map",
     "787.1ed0c42c.chunk.js.map": "/portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c3dbb56a.css",
+    "static/css/main.8c8fd105.css",
     "static/js/main.579b281b.js"
   ]
 }
