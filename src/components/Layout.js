@@ -3,6 +3,7 @@ import { Box, Grid } from '@mui/material';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import StorefrontIcon from '@mui/icons-material/Storefront';
 import Diversity3Icon from '@mui/icons-material/Diversity3';
 import CarCrashIcon from '@mui/icons-material/CarCrash';
 import ColorLensIcon from '@mui/icons-material/ColorLens';
@@ -118,13 +119,26 @@ export default function Layout() {
                 <Item><h1>Portfolio</h1>
                 </Item>
               </Grid>
-              <Grid item xs={6} md={6} sx={{ minHeight: '200px' }}>
-                <Item className="click" sx={{ height: '70vh' }}>
+              <Grid item xs={12} md={12} sx={{ minHeight: '200px' }}>
+                <Item className="click" sx={{ height: '55vh' }}>
                   <ProjectItem
                     github="https://github.com/cornell-dti/zing-lsc"
                     title="Zing"
                     icon={<Diversity3Icon />}
                     link="github.com/cornell-dti/zing-lsc"
+                    summary={`"All-in-one web app solution to building and managing 100s of study groups at Cornell"`}
+                    description={`● Nearly 1000 users from 300+ courses, utilized the FERN tech stack
+                    ● Built search bar + loading screen using TypeScript, React, and MUI, used React hooks to standardize URLs, enabled cross-listed courses in Firebase, redesigned authentication control with Azure`}
+                  />
+                </Item>
+              </Grid>
+              <Grid item xs={6} md={6} sx={{ minHeight: '200px' }}>
+                <Item className="click" sx={{ height: '75vh' }}>
+                  <ProjectItem
+                    github="https://github.com/jjennifergu/freelance-marketplace-backend"
+                    title="Circus"
+                    icon={<StorefrontIcon />}
+                    link="github.com/jjennifergu/freelance-marketplace-backend"
                     summary={`"Scalable iOS app to connect Cornell student freelancers with customers."`}
                     description={`● Lead backend dev using Python and Swift
                     ● Wrote 15+ REST API endpoints with authentication using Flask, architected database in SQLite/SQLAlchemy, and containerized/deployed using Docker and GCP
@@ -133,7 +147,7 @@ export default function Layout() {
                 </Item>
               </Grid>
               <Grid item xs={6} md={6} sx={{ minHeight: '200px' }}>
-                <Item className="click" sx={{ height: '70vh' }}>
+                <Item className="click" sx={{ height: '75vh' }}>
                   <ProjectItem
                     github="https://github.com/b3njamint/cs-3110-final"
                     title="Melody Generator"
