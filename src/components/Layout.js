@@ -8,6 +8,8 @@ import Diversity3Icon from '@mui/icons-material/Diversity3';
 import CarCrashIcon from '@mui/icons-material/CarCrash';
 import ColorLensIcon from '@mui/icons-material/ColorLens';
 import LibraryMusicIcon from '@mui/icons-material/LibraryMusic';
+import HourglassTopIcon from '@mui/icons-material/HourglassTop';
+import QueryStatsIcon from '@mui/icons-material/QueryStats';
 
 import pine from '../images/pine.jpeg';
 import walnut from '../images/walnut.jpeg';
@@ -119,8 +121,36 @@ export default function Layout() {
                 <Item><h1>Portfolio</h1>
                 </Item>
               </Grid>
-              <Grid item xs={12} md={12} sx={{ minHeight: '200px' }}>
-                <Item className="click" sx={{ height: '55vh' }}>
+              <Grid item xs={12} md={12} sx={{ minHeight: '80px' }}>
+                <Item className="click" sx={{ height: '40vh' }}>
+                  <ProjectItem
+                    github=""
+                    title="On Demand VaR"
+                    icon={<QueryStatsIcon />}
+                    link="coming soon"
+                    summary={`"A large-scale database system with Millennium Management, supporting multi-threaded workloads and maintaining a 1 query per second throughput under load"`}
+                    description={`
+                    `}
+                  />
+                </Item>
+              </Grid>
+              <Grid item xs={6} md={6} sx={{ minHeight: '200px' }}>
+                <Item className="click" sx={{ height: '75vh' }}>
+                  <ProjectItem
+                    github="https://github.com/cornell-dti/office-hours"
+                    title="Queue Me In"
+                    icon={<HourglassTopIcon />}
+                    link="github.com/cornell-dti/office-hours"
+                    summary={`"Data-centric solution to optimize office hours for 2000+ students at Cornell"`}
+                    description={`● Managing a team of 10 designers, developers, and business analysts
+                    ● Increasing scope of Queue Me In to accomodate new styles of office hours, increasing users by 25% 
+                    ● Driving product vision to deliver comprehensive student analytics
+                    `}
+                  />
+                </Item>
+              </Grid>
+              <Grid item xs={6} md={6} sx={{ minHeight: '200px' }}>
+                <Item className="click" sx={{ height: '75vh' }}>
                   <ProjectItem
                     github="https://github.com/cornell-dti/zing-lsc"
                     title="Zing"
@@ -161,7 +191,7 @@ export default function Layout() {
                 </Item>
               </Grid>
               <Grid item xs={6} md={6} sx={{ minHeight: '200px' }}>
-                <Item className="click" sx={{ height: '70vh' }}>
+                <Item className="click" sx={{ height: '75vh' }}>
                   <ProjectItem
                     website="https://www.aiartcritic.com/"
                     github="https://github.com/b3njamint/aiartcritic/"
@@ -176,7 +206,7 @@ export default function Layout() {
                 </Item>
               </Grid>
               <Grid item xs={6} md={6} sx={{ minHeight: '200px' }}>
-                <Item className="click" sx={{ height: '70vh' }}>
+                <Item className="click" sx={{ height: '75vh' }}>
                   <ProjectItem
                     website="https://www.voby.us/"
                     title="Vobyus"
