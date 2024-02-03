@@ -129,8 +129,7 @@ export default function Layout() {
                     icon={<QueryStatsIcon />}
                     link="coming soon"
                     summary={`"A large-scale database system with Millennium Management, supporting multi-threaded workloads and maintaining a 1 query per second throughput under load"`}
-                    description={`
-                    `}
+                    description={``}
                   />
                 </Item>
               </Grid>

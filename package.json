@@ -40,11 +40,11 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "7.21.0",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.11.16",
     "@mui/material": "^5.13.6",
-    "@babel/plugin-proposal-private-property-in-object": "7.21.0",
     "eslint": "^8.43.0",
     "eslint-plugin-import": "^2.27.5",
     "gh-pages": "^5.0.0"
