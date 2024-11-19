@@ -21,6 +21,7 @@ import Item from './Item';
 import AboutMe from './AboutMe';
 import Education from './Education';
 import ProjectItem from './ProjectItem';
+import Work from './Work';
 import '../style/style.css';
 
 export default function Layout() {
@@ -115,6 +116,11 @@ export default function Layout() {
               <Grid item xs={6} md={6} sx={{ minHeight: '200px' }}>
                 <Item sx={{ height: '60vh' }}>
                   <Education />
+                </Item>
+              </Grid>
+              <Grid item xs={12} md={12} sx={{ minHeight: '200px' }}>
+                <Item sx={{ height: '60vh' }}>
+                  <Work />
                 </Item>
               </Grid>
               <Grid item xs={12} md={12}>
