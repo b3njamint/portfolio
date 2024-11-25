@@ -2,13 +2,23 @@ import React from 'react';
 import { Button, Typography } from '@mui/material';
 import '../style/style.css';
 
-const ProjectItem = ({ github, website, title, icon, link, summary, description }) => {
+interface ProjectItemProps {
+  github?: string;
+  website?: string;
+  title: string;
+  icon: React.ReactNode;
+  link: string;
+  summary: string;
+  description: string;
+}
+
+const ProjectItem: React.FC<ProjectItemProps> = ({ github, website, title, icon, link, summary, description }) => {
   const handleOpenMultipleLinks = () => {
     if (github) window.open(github);
     if (website) window.open(website);
   };
   return (
-    <Button target="false" onClick={handleOpenMultipleLinks} sx={{
+    <Button onClick={handleOpenMultipleLinks} sx={{
       width: '100%', height: '100%', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap'
     }}>
       <Typography style={{

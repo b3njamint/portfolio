@@ -1,6 +1,7 @@
 import React from 'react';
 
-import pfp from '../images/pfp.jpg'
+const pfp = require('../images/pfp.jpg');
+
 
 const Picture = () => {
   return <img src={pfp} alt="Logo"
