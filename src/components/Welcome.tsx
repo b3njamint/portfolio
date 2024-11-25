@@ -2,6 +2,7 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import RamenDiningOutlinedIcon from '@mui/icons-material/RamenDiningOutlined';
 import '../style/style.css';
+import { colors } from '@mui/material';
 // import sprout from '../images/sprout.png';
 
 const Welcome = () => {
@@ -13,14 +14,10 @@ const Welcome = () => {
       textAlign: 'left',
       padding: '0px 40px 10px 40px',
     }}>
-      <h2>Welcome to my bento box!</h2>
+      <br></br>
+      <h2>Prev. SWE @ Amazon & Verizon</h2>
       <h1>
-        I'm Benjamin Tang, an impact-delivering, creative-thinking computer science student @ Cornell University.</h1>
-      <RamenDiningOutlinedIcon sx={{ fontSize: '100px' }} />
-      {/* <img src={sprout} style={{
-        objectFit: 'cover',
-        width: '100px',
-      }} /> */}
+        I’m <span style={{ color: '#B4DD1E' }}>Benjamin Tang</span>, an impact-delivering 💡, creative-thinking 💭 computer science student @ Cornell University.</h1>
     </Box >
   );
 };

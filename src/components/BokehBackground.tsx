@@ -84,6 +84,7 @@ const BokehBackground: React.FC<BokehBackgroundProps> = ({ zIndex = -100 }) => {
             }
 
             this.speedCoefficient = coef * coef;
+            // CHANGE OPACITY
             this.baseOpacity =
                 this.distance > 50 ? (this.idiosyncracy < 0.2 ? 0.1 : 0.05) : 0.16;
         }
@@ -109,7 +110,9 @@ const BokehBackground: React.FC<BokehBackgroundProps> = ({ zIndex = -100 }) => {
         const makeSingleDot = (isSmallDot: boolean) => {
             const x = randomIntInRange(0, canvas.width);
             const y = randomIntInRange(0, canvas.height);
+            // CHANGE SIZE
             const radius = isSmallDot ? variate(30, 10) : variate(80, 10);
+            // CHANGE COLOR
             const color = rgb(variate(180, 30), variate(221, 20), variate(30, 40));
             return new Bokeh(x, y, radius, {
                 opacity: 0.5,
@@ -120,8 +123,8 @@ const BokehBackground: React.FC<BokehBackgroundProps> = ({ zIndex = -100 }) => {
         const makeDots = () => {
             dots.length = 0; // Clear existing dots
             const canvasArea = canvas.width * canvas.height;
-            const desiredLargeDots = Math.ceil(canvasArea / 40000);
-            const desiredSmallDots = Math.ceil(canvasArea / 40000);
+            const desiredLargeDots = Math.ceil(canvasArea / 100000);
+            const desiredSmallDots = Math.ceil(canvasArea / 100000);
 
             for (let i = 0; i < desiredLargeDots; i++) {
                 dots.push(makeSingleDot(false));
@@ -170,7 +173,7 @@ const BokehBackground: React.FC<BokehBackgroundProps> = ({ zIndex = -100 }) => {
                 top: 0,
                 left: 0,
                 zIndex: zIndex,
-                backgroundColor: '#00080C',
+                backgroundColor: '#0c0c0c',
                 width: '100%',
                 height: '100%',
             }}

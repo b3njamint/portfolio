@@ -4,24 +4,34 @@ import Paper from '@mui/material/Paper';
 import '../fonts/fonts.css';
 
 const Item = styled(Paper)(() => ({
-  backgroundColor: '#f0ece4',
+  backgroundColor: '#1c1c1c',
   textAlign: 'center',
-  fontFamily: 'Bebas Neue',
-  boxShadow: `
-    0px 1px 1px hsl(0deg 0% 0% / 0.6),
-    1px 2px 2px hsl(0deg 0% 0% / 0.5),
-    2px 4px 4px hsl(0deg 0% 0% / 0.4),
-    4px 8px 8px hsl(0deg 0% 0% / 0.3),
-    8px 16px 16px hsl(0deg 0% 0% / 0.2)
-  `,
-  borderRadius: '10px',
+  fontFamily: 'Manrope',
+  // boxShadow: `
+  //   inset 0 0 10px 5px rgba(0, 0, 0, 0.25),
+  //   0 0 15px 15px rgba(180, 221, 30, 0.15),
+  //   0 0 25px 30px rgba(180, 221, 30, 0.075),
+  //   0 0 35px 45px rgba(180, 221, 30, 0.05)`,
+  opacity: 0.75,
+  borderRadius: '30px',
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'center',
   alignItems: 'center',
-  backgroundImage: `linear-gradient(rgba(255, 251, 232, 0.6), rgba(255, 251, 232, 0.6)), white`,
   overflow: 'hidden',
   textOverflow: 'ellipsis',
+
+  transition: 'all 0.3s ease-in-out',
+
+  '&:hover': {
+    transform: 'scale(1.01)',
+    // boxShadow: `
+    //   inset 0 0 10px 5px rgba(0, 0, 0, 0.3),
+    //   0 0 20px 20px rgba(180, 221, 30, 0.2),
+    //   0 0 30px 35px rgba(180, 221, 30, 0.1),
+    //   0 0 40px 50px rgba(180, 221, 30, 0.05)
+    // `,
+  }
 }));
 
 export default Item;

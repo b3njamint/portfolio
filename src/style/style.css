@@ -1,21 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
 h1 {
   overflow: hidden;
   text-overflow: ellipsis;
-  background-color: black;
+  color: white;
+  /* background-color: black;
   color: transparent;
   text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.3);
   -webkit-background-clip: text;
   -moz-background-clip: text;
-  background-clip: text;
+  background-clip: text; */
   font-size: 40px;
-  font-family: "Georgia";
+  font-family: "Manrope";
+  font-weight: 600;
 }
 
 h2 {
   overflow: hidden;
+  color: white;
   text-overflow: ellipsis;
   font-size: 20px;
-  font-family: "Muli"
+  font-family: "Manrope";
+  font-weight: 200;
 }
 
 .click {
@@ -29,37 +35,6 @@ h2 {
   -webkit-animation-iteration-count: infinite;
 }
 
-.click:hover {
-  /* opacity: 0.5; */
-  cursor: pointer;
-  animation-name: bounce;
-  -moz-animation-name: bounce;
-}
-
-@keyframes bounce {
-
-  0%,
-  100%,
-  20%,
-  50%,
-  80% {
-    -webkit-transform: translateY(0);
-    -ms-transform: translateY(0);
-    transform: translateY(0)
-  }
-
-  40% {
-    -webkit-transform: translateY(-6px);
-    -ms-transform: translateY(-6px);
-    transform: translateY(-6px)
-  }
-
-  60% {
-    -webkit-transform: translateY(-3px);
-    -ms-transform: translateY(-3px);
-    transform: translateY(-3px)
-  }
-}
 
 @keyframes moveGradients {
   0% {

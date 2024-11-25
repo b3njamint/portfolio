@@ -31,7 +31,7 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ github, website, title, icon,
           <h2>{link}</h2>
           <h2>{summary}</h2>
         </div>
-        <h2 style={{ color: 'black', textAlign: 'left', marginTop: 'auto' }}>
+        <h2 style={{ textAlign: 'left', marginTop: 'auto' }}>
           {description}
         </h2>
       </Typography>
