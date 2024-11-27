@@ -43,8 +43,8 @@ const BallsBackground: React.FC<BallsBackgroundProps> = ({ zIndex = -100 }) => {
             this.x = randomInRange(0, canvasWidth);
             this.y = randomInRange(0, canvasHeight);
             this.radius = randomInRange(100, 300);
-            this.speedX = randomInRange(0.5, 1.5);
-            this.speedY = randomInRange(-1, 1);
+            this.speedX = randomInRange(-0.5, 0.5);
+            this.speedY = randomInRange(-0.5, 0.5);
 
             const { r, g, b } = rgb(variate(180, 30), variate(221, 20), variate(30, 40));
             this.color = rgba(r, g, b, 0.3);
@@ -92,7 +92,7 @@ const BallsBackground: React.FC<BallsBackgroundProps> = ({ zIndex = -100 }) => {
         };
 
         const balls: GradientBall[] = [];
-        const ballCount = 4;
+        const ballCount = randomIntInRange(4, 6);
 
         const initBalls = () => {
             balls.length = 0;

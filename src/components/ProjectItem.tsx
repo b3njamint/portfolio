@@ -19,7 +19,10 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ github, website, title, icon,
   };
   return (
     <Button onClick={handleOpenMultipleLinks} sx={{
-      width: '100%', height: '100%', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap'
+      width: '100%', height: '100%', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap',
+      '&:hover': {
+        backgroundColor: 'rgba(180, 221, 30, 0.2)', // Green hover color
+      }
     }}>
       <Typography style={{
         textTransform: 'none', maxWidth: '100%', height: '100%', margin: '20px',
@@ -29,13 +32,13 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ github, website, title, icon,
           <h1>{title}</h1>
           {icon}
           <h2>{link}</h2>
-          <h2>{summary}</h2>
+          <h2 style={{ color: "#B4DD1E" }}>{summary}</h2>
         </div>
         <h2 style={{ textAlign: 'left', marginTop: 'auto' }}>
           {description}
         </h2>
       </Typography>
-    </Button>
+    </Button >
   );
 };
 

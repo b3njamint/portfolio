@@ -4,7 +4,7 @@ import Paper from '@mui/material/Paper';
 import '../fonts/fonts.css';
 
 const Item = styled(Paper)(() => ({
-  backgroundColor: '#1c1c1c',
+  backgroundColor: 'rgba(28, 28, 28, 0.75)',
   textAlign: 'center',
   fontFamily: 'Manrope',
   // boxShadow: `
@@ -12,7 +12,6 @@ const Item = styled(Paper)(() => ({
   //   0 0 15px 15px rgba(180, 221, 30, 0.15),
   //   0 0 25px 30px rgba(180, 221, 30, 0.075),
   //   0 0 35px 45px rgba(180, 221, 30, 0.05)`,
-  opacity: 0.75,
   borderRadius: '30px',
   display: 'flex',
   flexDirection: 'column',

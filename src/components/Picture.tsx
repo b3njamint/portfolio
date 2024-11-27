@@ -1,12 +1,12 @@
 import React from 'react';
 
-const pfp = require('../images/pfp.jpg');
+const pfp = require('../images/newpfp.png');
 
 
 const Picture = () => {
   return <img src={pfp} alt="Logo"
     style={{
-      objectFit: 'cover',
+      objectFit: 'contain',
       width: '100%',
       height: '100%',
       borderRadius: '10px',
