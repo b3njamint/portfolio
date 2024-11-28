@@ -1,4 +1,6 @@
-# Portfolio
+# TL;DR
+
+*To deploy, run `npm run deploy`, navigate to Settings > Pages, and add www.benjamint.me.*
 
 ## Available Scripts
 
