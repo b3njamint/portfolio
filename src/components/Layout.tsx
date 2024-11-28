@@ -11,7 +11,7 @@ import LibraryMusicIcon from '@mui/icons-material/LibraryMusic';
 import HourglassTopIcon from '@mui/icons-material/HourglassTop';
 import QueryStatsIcon from '@mui/icons-material/QueryStats';
 
-
+import '../style/style.css';
 import Welcome from './Welcome';
 import Picture from './Picture';
 import ContactButton from './ContactButton';
@@ -20,8 +20,8 @@ import AboutMe from './AboutMe';
 import Education from './Education';
 import ProjectItem from './ProjectItem';
 import Work from './Work';
-import '../style/style.css';
 import BallsBackground from './BallsBackground';
+import Artwork from './Artwork';
 
 const paintings = ['flowers.jpg', 'falls.jpg', 'apples.jpg', 'contour.jpg', 'tiles.jpg', 'hands.jpg']
 const digital = ['stingray.jpg', 'trafficlights.jpg', 'shit.jpg']
@@ -86,7 +86,7 @@ export default function Layout() {
               </Item>
             </Grid>
             <Grid item xs={12} md={4} sx={{ minHeight: '200px' }}>
-              <Item className="click">
+              <Item className="click" id="contactme">
                 <ContactButton
                   href="mailto:'bt283@cornell.edu'"
                   title="Email"
@@ -116,12 +116,12 @@ export default function Layout() {
               </Item>
             </Grid>
             <Grid item xs={12} md={6} sx={{ minHeight: '200px' }}>
-              <Item sx={{ height: '60vh' }}>
+              <Item sx={{ height: '450px' }}>
                 <AboutMe />
               </Item>
             </Grid>
             <Grid item xs={12} md={6} sx={{ minHeight: '200px' }}>
-              <Item sx={{ height: '60vh' }}>
+              <Item sx={{ height: '450px' }}>
                 <Education />
               </Item>
             </Grid>
@@ -135,7 +135,7 @@ export default function Layout() {
               </Item>
             </Grid>
             <Grid item xs={12} md={12} sx={{ minHeight: '80px' }}>
-              <Item className="click" sx={{ height: '40vh' }}>
+              <Item className="click" sx={{ height: '350px' }}>
                 <ProjectItem
                   github=""
                   title="On Demand VaR"
@@ -146,7 +146,7 @@ export default function Layout() {
               </Item>
             </Grid>
             <Grid item xs={12} md={6} sx={{ minHeight: '200px' }}>
-              <Item className="click" sx={{ height: '75vh' }}>
+              <Item className="click" sx={{ height: '350px' }}>
                 <ProjectItem
                   github="https://github.com/cornell-dti/office-hours"
                   title="Queue Me In"
@@ -160,7 +160,7 @@ export default function Layout() {
               </Item>
             </Grid>
             <Grid item xs={12} md={6} sx={{ minHeight: '200px' }}>
-              <Item className="click" sx={{ height: '75vh' }}>
+              <Item className="click" sx={{ height: '350px' }}>
                 <ProjectItem
                   github="https://github.com/cornell-dti/zing-lsc"
                   title="Zing"
@@ -172,7 +172,7 @@ export default function Layout() {
               </Item>
             </Grid>
             <Grid item xs={12} md={6} sx={{ minHeight: '200px' }}>
-              <Item className="click" sx={{ height: '75vh' }}>
+              <Item className="click" sx={{ height: '350px' }}>
                 <ProjectItem
                   github="https://github.com/jjennifergu/freelance-marketplace-backend"
                   title="Circus"
@@ -185,7 +185,7 @@ export default function Layout() {
               </Item>
             </Grid>
             <Grid item xs={12} md={6} sx={{ minHeight: '200px' }}>
-              <Item className="click" sx={{ height: '75vh' }}>
+              <Item className="click" sx={{ height: '350px' }}>
                 <ProjectItem
                   github="https://github.com/b3njamint/cs-3110-final"
                   title="Melody Generator"
@@ -198,7 +198,7 @@ export default function Layout() {
               </Item>
             </Grid>
             <Grid item xs={12} md={6} sx={{ minHeight: '200px' }}>
-              <Item className="click" sx={{ height: '75vh' }}>
+              <Item className="click" sx={{ height: '350px' }}>
                 <ProjectItem
                   website="https://www.aiartcritic.com/"
                   github="https://github.com/b3njamint/aiartcritic/"
@@ -213,7 +213,7 @@ export default function Layout() {
               </Item>
             </Grid>
             <Grid item xs={12} md={6} sx={{ minHeight: '200px' }}>
-              <Item className="click" sx={{ height: '75vh' }}>
+              <Item className="click" sx={{ height: '350px' }}>
                 <ProjectItem
                   website="https://www.voby.us/"
                   title="Vobyus"
@@ -231,19 +231,18 @@ export default function Layout() {
             </Grid>
 
             {images.map((image, index) => (
-              <Grid item xs={4} md={4}>
-                <Item sx={{
-                  height: '300px'
-                }}>
-                  <img key={index} src={image} alt={`${index}`} style={{
-                    objectFit: 'cover',
-                    width: '100%',
-                    height: '100%',
-                    borderRadius: '10px',
-                  }}
-                  /></Item>
+              <Grid item xs={6} md={4} key={index}>
+                <Artwork image={image} index={index} />
               </Grid>
             ))}
+
+            <Grid item xs={12} md={12}>
+              <Item>
+                <ContactButton
+                  href="#contactme"
+                  title="😁" icon={undefined} description={''} />
+              </Item>
+            </Grid>
           </Grid>
         </Box>
       </Box>

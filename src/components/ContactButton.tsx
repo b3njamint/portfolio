@@ -10,19 +10,41 @@ interface ContactButtonProps {
 }
 
 const ContactButton: React.FC<ContactButtonProps> = ({ href, title, icon, description }) => {
-  return (
-    <Button target="false" href={href} sx={{
-      width: '100%', height: '100%', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap',
-      '&:hover': {
-        backgroundColor: 'rgba(180, 221, 30, 0.2)', // Green hover color
+  const handleClick = (e: React.MouseEvent) => {
+    // Check if it's an internal link (starts with #)
+    if (href.startsWith('#')) {
+      e.preventDefault(); // Prevent default link behavior
+      const targetElement = document.querySelector(href);
+      if (targetElement) {
+        targetElement.scrollIntoView({
+          behavior: 'smooth',
+          block: 'center'
+        });
       }
-    }}>
+    }
+  };
+
+  return (
+    <Button
+      href={href}
+      onClick={handleClick}
+      sx={{
+        width: '100%',
+        height: '100%',
+        overflow: 'hidden',
+        textOverflow: 'ellipsis',
+        whiteSpace: 'nowrap',
+        '&:hover': {
+          backgroundColor: 'rgba(180, 221, 30, 0.2)', // Green hover color
+        }
+      }}
+    >
       <Typography style={{ textTransform: 'none', maxWidth: '100%' }}>
         <h1>{title}</h1>
         {icon}
         <h2>{description}</h2>
       </Typography>
-    </Button >
+    </Button>
   );
 };
 

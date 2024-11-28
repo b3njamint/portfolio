@@ -1,8 +1,6 @@
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 
-import '../fonts/fonts.css';
-
 const Item = styled(Paper)(() => ({
   backgroundColor: 'rgba(28, 28, 28, 0.75)',
   textAlign: 'center',
@@ -15,7 +13,8 @@ const Item = styled(Paper)(() => ({
   borderRadius: '30px',
   display: 'flex',
   flexDirection: 'column',
-  justifyContent: 'center',
+  // justifyContent: 'center',
+  justifyContent: 'flex-start',
   alignItems: 'center',
   overflow: 'hidden',
   textOverflow: 'ellipsis',
