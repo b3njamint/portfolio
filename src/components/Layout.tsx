@@ -30,6 +30,7 @@ const blackwhite = ['self.jpg', 'ideas.jpg', 'look.jpg', 'containment.jpg', 'par
 const imageNames = [...paintings, ...design, ...blackwhite, ...digital,];
 console.log(imageNames);
 const images = imageNames.map(name => require(`../images/art/${name}`));
+console.log("IMAGES" + images)
 
 export default function Layout() {
   return (
@@ -115,19 +116,9 @@ export default function Layout() {
                 />
               </Item>
             </Grid>
-            <Grid item xs={12} md={6} sx={{ minHeight: '200px' }}>
-              <Item sx={{ height: '450px' }}>
-                <AboutMe />
-              </Item>
-            </Grid>
-            <Grid item xs={12} md={6} sx={{ minHeight: '200px' }}>
-              <Item sx={{ height: '450px' }}>
-                <Education />
-              </Item>
-            </Grid>
             <Grid item xs={12} md={12} sx={{ minHeight: '200px' }}>
-              <Item sx={{ height: '60vh' }}>
-                <Work />
+              <Item sx={{ minHeight: '250px' }}>
+                <AboutMe />
               </Item>
             </Grid>
             <Grid item xs={12} md={12}>
@@ -135,14 +126,19 @@ export default function Layout() {
               </Item>
             </Grid>
             <Grid item xs={12} md={12} sx={{ minHeight: '80px' }}>
-              <Item className="click" sx={{ height: '350px' }}>
+              <Item className="click" sx={{ height: '300px' }}>
                 <ProjectItem
                   github=""
                   title="On Demand VaR"
                   icon={<QueryStatsIcon style={{ color: "#B4DD1E" }} />}
-                  link="coming soon"
-                  summary={`"A large-scale database system with Millennium Management, supporting multi-threaded workloads and maintaining a 1 query per second throughput under load"`}
-                  description={``} website={undefined} />
+                  link={undefined}
+                  summary={`"Enabling high workload Value at Risk queries for analysts at Millennium Management, a $70B hedge fund"`}
+                  description={`● Built a database system calculating Value at Risk (VaR) on > 1 billion rows, targeting 1 query/sec. throughput
+                    ● Cut latency by 81% over vanilla Postgres by optimizing query plans and resources, utilizing Apache Spark
+                    ● Presented to executives our cost-effective solution, reducing costs by 75% with only slightly lower performance`}
+                  website={"https://drive.google.com/file/d/1tjhTRQgF6T6OF3z6SAchC_aGUaauYfPJ/view?usp=sharing"}
+                  images={["millennium.png", "millennium2.png"]}
+                />
               </Item>
             </Grid>
             <Grid item xs={12} md={6} sx={{ minHeight: '200px' }}>
@@ -156,7 +152,10 @@ export default function Layout() {
                   description={`● Managing a team of 10 designers, developers, and business analysts
                     ● Increasing scope of Queue Me In to accomodate new styles of office hours, increasing users by 25% 
                     ● Driving product vision to deliver comprehensive student analytics
-                    `} website={undefined} />
+                    `}
+                  website={undefined}
+                  images={["qmi.png", "qmi2.png"]}
+                />
               </Item>
             </Grid>
             <Grid item xs={12} md={6} sx={{ minHeight: '200px' }}>
@@ -168,7 +167,10 @@ export default function Layout() {
                   link="github.com/cornell-dti/zing-lsc"
                   summary={`"All-in-one web app solution to building and managing 100s of study groups at Cornell"`}
                   description={`● Nearly 1000 users from 300+ courses, utilized the FERN tech stack
-                    ● Built search bar + loading screen using TypeScript, React, and MUI, used React hooks to standardize URLs, enabled cross-listed courses in Firebase, redesigned authentication control with Azure`} website={undefined} />
+                    ● Built search bar + loading screen using TypeScript, React, and MUI, used React hooks to standardize URLs, enabled cross-listed courses in Firebase, redesigned authentication control with Azure`}
+                  website={undefined}
+                  images={["zing.png", "zing2.png"]}
+                />
               </Item>
             </Grid>
             <Grid item xs={12} md={6} sx={{ minHeight: '200px' }}>
@@ -181,7 +183,10 @@ export default function Layout() {
                   summary={`"Scalable iOS app to connect Cornell student freelancers with customers."`}
                   description={`● Lead backend dev using Python and Swift
                     ● Wrote 15+ REST API endpoints with authentication using Flask, architected database in SQLite/SQLAlchemy, and containerized/deployed using Docker and GCP
-                    ● Awarded Best Frontend/UI by Cornell App Development out of 150+ students`} website={undefined} />
+                    ● Awarded Best Frontend/UI by Cornell App Development out of 150+ students`}
+                  website={undefined}
+                  images={["circus.png", "circus2.png", "circus3.png"]}
+                />
               </Item>
             </Grid>
             <Grid item xs={12} md={6} sx={{ minHeight: '200px' }}>
@@ -194,7 +199,10 @@ export default function Layout() {
                   summary={`"Multi-hand music generator in modern and archaic scales, built entirely in OCaml"`}
                   description={`● Implemented multi-hand harmonies, chords, and different instruments
                     ● Enabled robust input validation through pattern matching
-                    ● Wrote 100s of lines of black-box, glass-box, and randomized test cases`} website={undefined} />
+                    ● Wrote 100s of lines of black-box, glass-box, and randomized test cases`}
+                  website={undefined}
+                  images={["music.png", "music2.png"]}
+                />
               </Item>
             </Grid>
             <Grid item xs={12} md={6} sx={{ minHeight: '200px' }}>
@@ -209,6 +217,7 @@ export default function Layout() {
                   description={`● Trained classification models with 25,000 images to critique art
                     ● Designed and coded algorithms to analyze pixels and colors in Python
                     ● Developed a website using Django and deployed on Google Cloud`}
+                  images={["art.png", "art2.png"]}
                 />
               </Item>
             </Grid>
@@ -221,9 +230,22 @@ export default function Layout() {
                   link="voby.us"
                   summary={`"Jetson Nano-based smart dashboard detecting drowsy and distracted driving."`}
                   description={`● Co-founded student entrepreneurship team, achieved 85% accuracy to prevent vehicle accidents, using JavaScript, Python, TensorFlow
-                    ● 1st place at the 2021 Model Entrepreneur Competition by Columbia Business School, named a Conrad Innovator`} github={undefined} />
+                    ● 1st place at the 2021 Model Entrepreneur Competition by Columbia Business School, named a Conrad Innovator`}
+                  github={undefined}
+                  images={["vobyus.png", "vobyus2.png"]}
+                />
               </Item>
             </Grid>
+            {/* <Grid item xs={12} md={6} sx={{ minHeight: '200px' }}>
+              <Item sx={{ height: '450px' }}>
+                <Education />
+              </Item>
+            </Grid> */}
+            {/* <Grid item xs={12} md={12} sx={{ minHeight: '200px' }}>
+              <Item sx={{ height: '60vh' }}>
+                <Work />
+              </Item>
+            </Grid> */}
             <Grid item xs={12} md={12}>
               <Item><h1>Portfolio (the other kind)</h1>
                 <h2>Artwork mostly from 2019-2020. Recent painting revival in 2024.</h2>

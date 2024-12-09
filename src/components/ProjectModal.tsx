@@ -17,9 +17,10 @@ interface ProjectModalProps {
     website?: string;
     title: string;
     icon: React.ReactNode;
-    link: string;
+    link?: string;
     summary: string;
     description: string;
+    images: string[];
 }
 
 const ProjectModal: React.FC<ProjectModalProps> = ({
@@ -31,7 +32,8 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
     icon,
     link,
     summary,
-    description
+    description,
+    images // Add image to destructured props
 }) => {
     const handleOpenLinks = () => {
         if (github) window.open(github);
@@ -57,7 +59,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                         backgroundColor: 'rgba(28, 28, 28, 0.85)',
                         borderRadius: '30px',
                         width: '80%',
-                        maxWidth: '700px',
+                        maxWidth: '1000px',
                         maxHeight: '90%',
                         overflow: 'auto',
                         padding: '30px',
@@ -102,19 +104,11 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                         style={{
                             textAlign: 'center',
                             marginBottom: '20px',
-                            color: '#B4DD1E',
+                            color: 'white',
                         }}
                     >
                         {title}
                     </h1>
-
-                    <Box sx={{
-                        display: 'flex',
-                        justifyContent: 'center',
-                        marginBottom: '20px',
-                    }}>
-                        {icon}
-                    </Box>
 
                     <h2
                         style={{
@@ -136,10 +130,43 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                         {summary}
                     </h2>
 
+                    {images && images.length > 0 && (
+                        <Box sx={{
+                            display: 'flex',
+                            justifyContent: 'center',
+                            gap: '15px', // Space between images
+                            marginBottom: '20px',
+                        }}>
+                            {images.map((imageName, index) => (
+                                <Box
+                                    key={index}
+                                    sx={{
+                                        width: images.length > 1 ? '45%' : '100%',
+                                        borderRadius: '20px',
+                                        overflow: 'hidden',
+                                        display: 'flex',
+                                        justifyContent: 'center',
+                                        alignItems: 'center',
+                                    }}
+                                >
+                                    <img
+                                        src={require(`../images/projects/${imageName}`)}
+                                        alt={`${title} project image ${index + 1}`}
+                                        style={{
+                                            height: '30vh',
+                                            width: '100%',
+                                            objectFit: 'cover',
+                                        }}
+                                    />
+                                </Box>
+                            ))}
+                        </Box>
+                    )}
+
                     <h2
                         id="project-modal-description"
                         style={{
-                            marginBottom: '30px',
+                            margin: '0px 30px 30px 30px',
                             textAlign: 'left',
                             whiteSpace: 'pre-line',
                         }}

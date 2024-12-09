@@ -11,6 +11,7 @@ const AboutMe = () => {
           <br /><br />
           <span style={{ color: '#BADD1E' }}>Looking for full-time SWE 🧑‍💻 or trading 📈 opportunities starting early 2026.</span>
         </h2 >
+        <br />
       </span>
     </>
   );

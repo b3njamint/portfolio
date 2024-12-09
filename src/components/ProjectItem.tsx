@@ -9,9 +9,10 @@ interface ProjectItemProps {
   website?: string;
   title: string;
   icon: React.ReactNode;
-  link: string;
+  link?: string;
   summary: string;
   description: string;
+  images: string[];
 }
 
 const ProjectItem: React.FC<ProjectItemProps> = ({
@@ -21,7 +22,8 @@ const ProjectItem: React.FC<ProjectItemProps> = ({
   icon,
   link,
   summary,
-  description
+  description,
+  images,
 }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -79,6 +81,7 @@ const ProjectItem: React.FC<ProjectItemProps> = ({
         link={link}
         summary={summary}
         description={description}
+        images={images}
       />
     </>
   );

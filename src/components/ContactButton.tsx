@@ -21,12 +21,14 @@ const ContactButton: React.FC<ContactButtonProps> = ({ href, title, icon, descri
           block: 'center'
         });
       }
+    } else {
+      // Open external links in a new tab
+      window.open(href, '_blank', 'noopener,noreferrer');
     }
   };
 
   return (
     <Button
-      href={href}
       onClick={handleClick}
       sx={{
         width: '100%',
